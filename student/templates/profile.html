@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}profile{% endblock title %}
+{% block content %}
+
+<div class="card text-center">
+    <div class="card-header">
+        <h1>My Profile</h1>
+    </div>
+    <div class="card-body container">
+        <div>
+            {% for i in customer %}
+            <div class="input-group mb-3">
+              <span class="input-group-text bg-dark text-secondary w-25">Name</span> 
+              <span class="form-control">{{i.name}}</span> 
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-dark text-secondary w-25">Phone Number</span> 
+                <span class="form-control">{{i.phno}}</span> 
+              </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-dark text-secondary w-25">Email</span> 
+                <span class="form-control">{{i.email}}</span> 
+            </div>
+            {% endfor %}
+    
+  
+        </div>
+    </div>
+    <div class="card-footer text-muted d-flex justify-content-end">
+        <a href="{% url 'editprofile'%}" class="btn btn-dark">Edit Profile</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'mainbase.html' %}
+{% load static %}
+{% block title %}forgotepassword{% endblock title %}
+{% block content %}
+<div style=" background-color: azure;
+padding: 50px;
+margin-top:  15%;
+border: 1px dotted black;
+border-radius: 25px;
+margin-right:450px;
+margin-left:450px">
+    <form>
+        <h1>forgotepassword</h1>
+        <div class="row d-block">
+            <div class="col">
+                <input type="email" class="form-control" placeholder="emailid" id="email">
+              </div>
+              <div class="col" style="padding-top: 15px;">
+                <input type="password" class="form-control" placeholder="Password" id="pass1">
+              </div>
+              <div class="col" style="padding-top: 15px;">
+                  <input type="password" class="form-control" placeholder="conform Password" id="pass2">
+                </div>
+            </div>
+            <div style="padding-top:15px; padding-left:55px">
+                <button type="submit" class="btn btn-info" id="submit"> submit</button>
+                  </div>
+    </form>
+</div>
+{% endblock content %}

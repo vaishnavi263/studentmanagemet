@@ -1,0 +1,17 @@
+{% extends 'mainbase.html' %}
+{% load static %}
+{% block title %}gellery{% endblock title %}
+{% block navs %}
+<nav class="nav">
+    <a class="nav-link active" href="{% url 'mainhome' %}">Home</a>
+    <a class="nav-link active" href="{% url 'course' %}">Course</a>
+    <a class="nav-link active" href="{% url 'gallery' %}">Gallery</a>
+    <a class="nav-link active" href="{% url 'contact' %}">Contact</a>
+</nav>
+{% endblock %}
+{% block content %}
+<h1 class="text-center">Gallery</h1>
+<img src="{% static 'image/img5.jpeg' %}" class="rounded float-left" alt="...">
+<img src="{% static 'image/img6.jpeg' %}" class="rounded float-right" alt="...">
+<img src="{% static 'image/img7.jpeg' %}" class="rounded mx-auto d-block" alt="...">
+{% endblock %}

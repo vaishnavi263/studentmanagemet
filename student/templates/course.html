@@ -1,0 +1,23 @@
+{% extends 'mainbase.html' %}
+{% block title %}course{% endblock title %}
+{% block content %}
+{% block navs %}
+<nav class="nav" style="background-color:purple; ">
+    <a class="nav-link active" aria-current="page" href="#"><h3>home</h3></a>
+    <a class="nav-link" href="{% url 'course' %}"><h3>course</h3></a>
+    <a class="nav-link" href="#"><h3>gallery</h3></a>
+    <a class="nav-link disabled"><h3>contact</h3></a>
+  </nav>
+
+<h1 style="text-align: center;color:rgb(31, 223, 111);">Our Courses</h1>
+{% for c in course %}
+<div class="card">
+    <h5 style="color: crimson;">{{c.name}}</h5>
+    <p>{{c.description}}</p>
+    <h6 style="color: crimson;">Duration:</h6><p>{{c.duration}}month<p>
+    <h6 style="color: crimson;">fee:</h6><p>{{c.fee}}</p>   
+</div>
+{% endfor %}
+{% endblock navs %} 
+
+{% endblock %}
